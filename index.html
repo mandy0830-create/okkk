@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聖誕音樂劇《不要怕！森林大霧》班級參加調查表</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts: Noto Sans TC & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        forest: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#166534',
+                            700: '#15803d',
+                            800: '#1B4D3E', // 聖誕松樹綠
+                            900: '#14532D', // 深聖誕松樹綠
+                        },
+                        holly: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            200: '#fecaca',
+                            300: '#fca5a5',
+                            400: '#f87171',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            700: '#B91C1C', // 聖誕冬青紅
+                            800: '#991B1B',
+                            900: '#7f1d1d',
+                        },
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#FDE68A',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#F59E0B', // 星光金
+                            600: '#D97706', // 暖星光金
+                            700: '#b45309',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7; /* 溫暖雪白與奶油白交織 */
+            background-image: 
+                radial-gradient(circle at 20px 30px, rgba(217, 119, 6, 0.08) 2px, transparent 0),
+                radial-gradient(circle at 80px 70px, rgba(27, 77, 62, 0.06) 2.5px, transparent 0),
+                radial-gradient(circle at 130px 25px, rgba(185, 28, 28, 0.06) 2px, transparent 0),
+                radial-gradient(circle at 50px 110px, rgba(245, 158, 11, 0.09) 1.5px, transparent 0);
+            background-size: 160px 140px;
+            color: #1f2937;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* 聖誕拐杖糖紅綠金斜紋裝飾條 */
+        .festive-ribbon {
+            background: repeating-linear-gradient(
+                -45deg,
+                #B91C1C,
+                #B91C1C 14px,
+                #FDFBF7 14px,
+                #FDFBF7 22px,
+                #1B4D3E 22px,
+                #1B4D3E 36px,
+                #F59E0B 36px,
+                #F59E0B 42px
+            );
+        }
+        /* 自訂捲軸 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bbf7d0;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1B4D3E;
+        }
+        /* 平滑過渡效果 */
+        .class-row-transition {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* 細緻雪花飄落動畫 */
+        @keyframes snowfall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 0.4; }
+            50% { opacity: 0.85; }
+            100% { transform: translateY(18px) rotate(25deg); opacity: 0.3; }
+        }
+        .snowflake-deco {
+            animation: snowfall 4.5s ease-in-out infinite alternate;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-16">
+
+    <!-- 頂部聖誕紅綠金斜紋裝飾條 -->
+    <div class="h-2.5 festive-ribbon w-full shadow-xs"></div>
+
+    <!-- 主容器 -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 space-y-6">
+
+        <!-- 1. 活動資訊區塊（聖誕森林深綠卡片） -->
+        <section class="bg-white rounded-2xl shadow-md border-2 border-gold-300/70 overflow-hidden">
+            <!-- 卡片頂部視覺橫幅 -->
+            <div class="bg-gradient-to-br from-forest-900 via-forest-800 to-[#0f392b] p-6 sm:p-8 text-white relative overflow-hidden border-b border-gold-400/30">
+                <!-- 聖誕光暈與雪花裝飾 -->
+                <div class="absolute -right-10 -top-10 w-52 h-52 rounded-full bg-gold-500/15 blur-2xl pointer-events-none"></div>
+                <div class="absolute right-24 -bottom-12 w-40 h-40 rounded-full bg-holly-700/25 blur-xl pointer-events-none"></div>
+                <div class="absolute right-6 top-5 text-gold-300/30 text-3xl sm:text-4xl select-none pointer-events-none snowflake-deco">❄️</div>
+                <div class="absolute right-20 bottom-4 text-gold-200/25 text-2xl select-none pointer-events-none">🎄</div>
+
+                <div class="relative z-10">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-holly-700/90 border border-gold-300/60 text-gold-100 text-xs sm:text-sm font-bold mb-3 shadow-xs">
+                        <span class="text-gold-300">✨</span>
+                        <span>聖誕生命教育特別活動</span>
+                        <span>🎄</span>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-bold tracking-tight leading-snug text-white drop-shadow-xs">
+                        聖誕音樂劇《不要怕！森林大霧》<br class="sm:hidden">班級參加調查表
+                    </h1>
+                </div>
+            </div>
+
+            <!-- 活動詳細資訊 -->
+            <div class="p-6 sm:p-8 space-y-6 bg-gradient-to-b from-white to-[#FFFDF9]">
+                <!-- 時間、地點、團隊網格 -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-forest-50/70 border border-forest-200/80">
+                        <div class="p-2 rounded-lg bg-forest-800 text-gold-300 shrink-0 shadow-xs">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <div class="text-xs text-forest-800/70 font-semibold">活動時間</div>
+                            <div class="text-sm sm:text-base font-bold text-gray-900 mt-0.5">12/8(二) 13：30 ~ 14：15</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-holly-50/60 border border-holly-200/70">
+                        <div class="p-2 rounded-lg bg-holly-700 text-gold-200 shrink-0 shadow-xs">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <div class="text-xs text-holly-800/70 font-semibold">活動地點</div>
+                            <div class="text-sm sm:text-base font-bold text-gray-900 mt-0.5">禮堂</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-gold-50/80 border border-gold-300/70">
+                        <div class="p-2 rounded-lg bg-gold-600 text-white shrink-0 shadow-xs">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gold-700 font-semibold">演出團隊</div>
+                            <div class="text-sm font-bold text-gray-900 mt-0.5 leading-snug">彩虹愛家生命教育協會<br class="hidden sm:inline">賴厝團隊</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 活動簡介 -->
+                <div class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    為本校學生帶來精彩且寓教於樂之音樂劇表演，劇中同時呈現<span class="font-bold text-forest-800 bg-forest-50 px-1.5 py-0.5 rounded">勇氣、合作、辨別真相、接納差異與道歉修復</span>等主題，誠摯邀請各班老師帶領學生一同觀看。
+                </div>
+
+                <!-- 注意事項醒目提示 (聖誕星光金與冬青紅點綴) -->
+                <div class="flex items-start gap-3.5 p-4 rounded-xl bg-gradient-to-r from-gold-50 to-amber-50/70 border border-gold-300 border-l-4 border-l-holly-700 text-amber-950 shadow-2xs">
+                    <div class="p-1.5 rounded-full bg-gold-200/80 text-holly-700 shrink-0 mt-0.5">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <div class="text-sm sm:text-base">
+                        <span class="font-bold text-holly-700 block sm:inline">🔔 重要提醒：</span>
+                        活動當天請老師提醒學生攜帶<span class="font-bold underline decoration-gold-500 decoration-2 underline-offset-4 mx-1 text-forest-900">「勇士椅」</span>並提前 <span class="font-bold text-holly-800">10 分鐘左右</span>入席。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 統計儀表板（即時更新） -->
+        <section class="bg-white/95 backdrop-blur-xs rounded-2xl shadow-sm border border-gold-200/80 p-5 sm:p-6">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-forest-600 animate-pulse" id="sync-indicator"></span>
+                    <h2 class="text-base sm:text-lg font-bold text-forest-900">🎁 全校填報即時統計</h2>
+                </div>
+                <span class="text-xs text-gray-500 font-medium" id="sync-status-text">連線同步中...</span>
+            </div>
+
+            <!-- 數據卡片網格 -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-5">
+                <div class="p-3.5 rounded-xl bg-[#FDFBF7] border border-gray-200/80 text-center">
+                    <div class="text-xs text-gray-500 font-medium">全校總班級數</div>
+                    <div class="text-2xl sm:text-3xl font-bold text-gray-800 mt-1" id="stat-total">32</div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-forest-50 border border-forest-200 text-center">
+                    <div class="text-xs text-forest-800 font-semibold">🎄 確認參加</div>
+                    <div class="text-2xl sm:text-3xl font-bold text-forest-800 mt-1"><span id="stat-join">0</span><span class="text-sm font-normal text-forest-700 ml-0.5">班</span></div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-holly-50/70 border border-holly-200 text-center">
+                    <div class="text-xs text-holly-700 font-semibold">不參加</div>
+                    <div class="text-2xl sm:text-3xl font-bold text-holly-700 mt-1"><span id="stat-decline">0</span><span class="text-sm font-normal text-holly-600 ml-0.5">班</span></div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-gold-50/70 border border-gold-200 text-center">
+                    <div class="text-xs text-gold-700 font-semibold">尚未填寫</div>
+                    <div class="text-2xl sm:text-3xl font-bold text-gold-700 mt-1"><span id="stat-pending">32</span><span class="text-sm font-normal text-gold-600 ml-0.5">班</span></div>
+                </div>
+            </div>
+
+            <!-- 進度條 -->
+            <div class="space-y-1.5">
+                <div class="flex justify-between text-xs font-medium text-gray-600">
+                    <span>全校填報完成率 (<span id="stat-responded-text">0/32 班</span>)</span>
+                    <span id="stat-percentage" class="font-bold text-forest-800">0%</span>
+                </div>
+                <div class="w-full h-3.5 bg-gray-100 rounded-full overflow-hidden flex border border-gray-200/60">
+                    <div id="progress-join" class="bg-gradient-to-r from-forest-800 to-forest-600 h-full transition-all duration-500" style="width: 0%" title="參加"></div>
+                    <div id="progress-decline" class="bg-gradient-to-r from-holly-700 to-holly-500 h-full transition-all duration-500" style="width: 0%" title="不參加"></div>
+                </div>
+                <div class="flex items-center gap-4 text-[11px] text-gray-500 pt-0.5">
+                    <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-forest-800"></span> 參加 (松樹綠)</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-holly-700"></span> 不參加 (冬青紅)</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-gray-200"></span> 未填寫</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 篩選器與操作工具列 -->
+        <section class="bg-white/95 backdrop-blur-xs rounded-2xl shadow-sm border border-gold-200/80 p-4 sm:p-5 space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-100 pb-3.5">
+                <div class="text-sm font-bold text-forest-900 flex items-center gap-2">
+                    <svg class="w-4 h-4 text-holly-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
+                    <span>快速篩選與匯出</span>
+                </div>
+                <button id="export-csv-btn" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-forest-800 hover:bg-forest-900 active:scale-95 text-white border border-gold-400/50 text-xs sm:text-sm font-medium shadow-sm transition cursor-pointer">
+                    <svg class="w-4 h-4 text-gold-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <span>匯出 CSV 統計表</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- 年級篩選 -->
+                <div>
+                    <label class="block text-xs font-semibold text-gray-500 mb-1.5">依年級篩選</label>
+                    <div class="flex flex-wrap gap-1.5" id="grade-filters">
+                        <button data-grade="all" class="grade-filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-forest-800 text-white shadow-xs transition cursor-pointer">全部年級</button>
+                        <button data-grade="1" class="grade-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-forest-50 transition cursor-pointer">一年級</button>
+                        <button data-grade="2" class="grade-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-forest-50 transition cursor-pointer">二年級</button>
+                        <button data-grade="3" class="grade-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-forest-50 transition cursor-pointer">三年級</button>
+                        <button data-grade="4" class="grade-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-forest-50 transition cursor-pointer">四年級</button>
+                        <button data-grade="5" class="grade-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-forest-50 transition cursor-pointer">五年級</button>
+                        <button data-grade="6" class="grade-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-forest-50 transition cursor-pointer">六年級</button>
+                    </div>
+                </div>
+
+                <!-- 狀態篩選 -->
+                <div>
+                    <label class="block text-xs font-semibold text-gray-500 mb-1.5">依填報狀態篩選</label>
+                    <div class="flex flex-wrap gap-1.5" id="status-filters">
+                        <button data-status="all" class="status-filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-holly-700 text-white shadow-xs transition cursor-pointer">全部狀態</button>
+                        <button data-status="pending" class="status-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-holly-50 transition cursor-pointer">未填寫</button>
+                        <button data-status="join" class="status-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-holly-50 transition cursor-pointer">參加</button>
+                        <button data-status="decline" class="status-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#FDFBF7] border border-gray-200 text-gray-700 hover:bg-holly-50 transition cursor-pointer">不參加</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 班級調查列表容器 -->
+        <div id="grades-container" class="space-y-6">
+            <!-- 載入中骨架屏 -->
+            <div class="bg-white rounded-2xl p-8 text-center text-gray-500 border border-gold-200/80 shadow-sm">
+                <div class="inline-block w-8 h-8 border-4 border-forest-200 border-t-forest-800 rounded-full animate-spin mb-3"></div>
+                <p class="text-sm font-medium">正在載入全校班級名單與即時狀態...</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 浮動提示訊息 (Toast Notification) -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- Firebase SDK 與應用程式邏輯 -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+        import { getFirestore, collection, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB-hfzBqyfZZl23pnbm49MecQJrhn5Rk4I",
+            authDomain: "artifact-7fb88.firebaseapp.com",
+            projectId: "artifact-7fb88",
+            storageBucket: "artifact-7fb88.firebasestorage.app",
+            messagingSenderId: "901264726817",
+            appId: "1:901264726817:web:bd192127fbccf91aab7c60",
+            measurementId: "G-RWLYLQCMY3"
+        };
+
+        // 1. 全校年級與班級架構定義 (共 32 班，搭配聖誕小圖示)
+        const SCHOOL_STRUCTURE = [
+            { grade: '1', icon: '🎄', title: '一年級', classes: ['101', '102', '103', '104'] },
+            { grade: '2', icon: '❄️', title: '二年級', classes: ['201', '202', '203', '204', '205'] },
+            { grade: '3', icon: '⭐', title: '三年級', classes: ['301', '302', '303', '304', '305'] },
+            { grade: '4', icon: '🎁', title: '四年級', classes: ['401', '402', '403', '404', '405', '406'] },
+            { grade: '5', icon: '🔔', title: '五年級', classes: ['501', '502', '503', '504', '505', '506'] },
+            { grade: '6', icon: '🦌', title: '六年級', classes: ['601', '602', '603', '604', '605', '606'] }
+        ];
+
+        const TOTAL_CLASSES = 32;
+        const COLLECTION_NAME = 'christmas_musical_2026';
+        const LOCAL_STORAGE_KEY = 'christmas_musical_2026_backup';
+
+        // 應用程式狀態
+        // 資料格式: { '101': { classId: '101', grade: '一年級', status: 'join' | 'decline' | null, note: '', updatedAt: ... } }
+        let responsesData = {};
+        let currentGradeFilter = 'all';
+        let currentStatusFilter = 'all';
+        let db = null;
+        let analytics = null;
+        let isFirebaseConnected = false;
+        let noteTimers = {}; // 用於備註輸入防抖動 (Debounce)
+
+        // 根據班級代號取得年級名稱
+        function getGradeTitleByClassId(classId) {
+            const gradeDigit = String(classId).charAt(0);
+            const found = SCHOOL_STRUCTURE.find(g => g.grade === gradeDigit);
+            return found ? found.title : `${gradeDigit}年級`;
+        }
+
+        // 載入本機備援資料
+        function loadLocalBackup() {
+            try {
+                const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    // 相容舊資料格式轉換
+                    Object.keys(parsed).forEach(key => {
+                        const item = parsed[key];
+                        if (item.status === 'attend') item.status = 'join';
+                        if (item.status === 'pending') item.status = null;
+                    });
+                    responsesData = parsed;
+                }
+            } catch (e) {
+                console.warn('讀取本機備援失敗:', e);
+            }
+        }
+
+        // 寫入本機備援資料
+        function saveLocalBackup() {
+            try {
+                localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(responsesData));
+            } catch (e) {
+                console.warn('寫入本機備援失敗:', e);
+            }
+        }
+
+        // 更新連線狀態顯示燈號
+        function updateSyncStatusUI(mode, text) {
+            const statusText = document.getElementById('sync-status-text');
+            const indicator = document.getElementById('sync-indicator');
+            if (!statusText || !indicator) return;
+
+            statusText.textContent = text;
+            if (mode === 'connected') {
+                indicator.className = 'w-2.5 h-2.5 rounded-full bg-forest-600 animate-pulse';
+            } else if (mode === 'local') {
+                indicator.className = 'w-2.5 h-2.5 rounded-full bg-gold-500';
+            } else {
+                indicator.className = 'w-2.5 h-2.5 rounded-full bg-holly-600 animate-ping';
+            }
+        }
+
+        // 顯示自訂提示訊息 (取代 alert)
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            
+            const bgColors = {
+                success: 'bg-forest-800 text-white border-gold-400/50',
+                info: 'bg-holly-700 text-white border-holly-600',
+                error: 'bg-rose-800 text-white border-rose-600'
+            };
+
+            const icons = {
+                success: '<svg class="w-4 h-4 text-gold-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>',
+                info: '<svg class="w-4 h-4 text-gold-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
+                error: '<svg class="w-4 h-4 text-rose-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
+            };
+
+            toast.className = `flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-lg border text-sm font-medium transform transition-all duration-300 translate-y-2 opacity-0 ${bgColors[type] || bgColors.info}`;
+            toast.innerHTML = `${icons[type] || '' }<span>${message}</span>`;
+
+            container.appendChild(toast);
+
+            requestAnimationFrame(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            });
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 2800);
+        }
+
+        // 初始化 Firebase 與 Analytics / Firestore
+        function initFirebase() {
+            // 先載入本機備援確保畫面立即呈現
+            loadLocalBackup();
+            renderGradesList();
+            updateStats();
+
+            try {
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+
+                // 安全初始化 Analytics (避免廣告阻擋器或環境不支援導致報錯)
+                try {
+                    analytics = getAnalytics(app);
+                } catch (analyticsErr) {
+                    console.warn('Analytics 初始化略過 (可能被瀏覽器阻擋):', analyticsErr);
+                }
+
+                // 初始化 Firestore 並監聽 christmas_musical_2026 集合
+                db = getFirestore(app);
+                subscribeToResponses();
+
+            } catch (error) {
+                console.warn('Firebase 初始化失敗，切換為本機儲存模式:', error);
+                isFirebaseConnected = false;
+                updateSyncStatusUI('local', '本機儲存模式 (已啟用自動備份)');
+            }
+        }
+
+        // 監聽 Firestore 集合即時資料
+        function subscribeToResponses() {
+            if (!db) return;
+
+            const colRef = collection(db, COLLECTION_NAME);
+
+            onSnapshot(colRef, (snapshot) => {
+                isFirebaseConnected = true;
+                updateSyncStatusUI('connected', 'Firebase 雲端即時同步中');
+
+                const newData = {};
+                snapshot.forEach((docSnap) => {
+                    const data = docSnap.data();
+                    newData[docSnap.id] = {
+                        classId: data.classId || docSnap.id,
+                        grade: data.grade || getGradeTitleByClassId(docSnap.id),
+                        status: data.status !== undefined ? data.status : null,
+                        note: data.note || '',
+                        updatedAt: data.updatedAt || null
+                    };
+                });
+
+                responsesData = newData;
+                saveLocalBackup();
+                
+                renderGradesList();
+                updateStats();
+            }, (error) => {
+                console.warn('Firestore 監聽權限或連線異常，已自動切換本機備援:', error);
+                isFirebaseConnected = false;
+                updateSyncStatusUI('local', '本機儲存模式 (雲端權限未開啟或離線)');
+            });
+        }
+
+        // 儲存或更新單一班級資料至 Firestore 與本機備援
+        async function saveClassResponse(classId, status, note) {
+            const payload = {
+                classId: classId,
+                grade: getGradeTitleByClassId(classId),
+                status: status, // 'join' | 'decline' | null
+                note: note,
+                updatedAt: new Date().toISOString()
+            };
+
+            // 樂觀更新 UI 與本機備援
+            responsesData[classId] = payload;
+            saveLocalBackup();
+            renderGradesList();
+            updateStats();
+
+            if (!db) return;
+
+            try {
+                const docRef = doc(db, COLLECTION_NAME, classId);
+                await setDoc(docRef, payload, { merge: true });
+                if (!isFirebaseConnected) {
+                    isFirebaseConnected = true;
+                    updateSyncStatusUI('connected', 'Firebase 雲端即時同步中');
+                }
+            } catch (error) {
+                console.warn('寫入 Firestore 失敗，資料已安全儲存於本機:', error);
+                isFirebaseConnected = false;
+                updateSyncStatusUI('local', '本機儲存模式 (已自動備份)');
+            }
+        }
+
+        // 處理「參加」與「不參加」按鈕點擊 (TimeSlot 雙態切換邏輯)
+        window.handleStatusToggle = function(classId, targetStatus) {
+            const currentRecord = responsesData[classId] || { status: null, note: '' };
+            const nextStatus = (currentRecord.status === targetStatus) ? null : targetStatus;
+            
+            saveClassResponse(classId, nextStatus, currentRecord.note || '');
+
+            if (nextStatus === 'join') {
+                showToast(`🎄 ${classId} 班已登記「參加」`, 'success');
+            } else if (nextStatus === 'decline') {
+                showToast(`${classId} 班已登記「不參加」`, 'info');
+            } else {
+                showToast(`${classId} 班已清除選擇`, 'info');
+            }
+        };
+
+        // 處理備註欄位輸入
+        window.handleNoteInput = function(classId, value) {
+            const currentRecord = responsesData[classId] || { status: null, note: '' };
+            responsesData[classId] = { ...currentRecord, note: value };
+            saveLocalBackup();
+
+            clearTimeout(noteTimers[classId]);
+            noteTimers[classId] = setTimeout(() => {
+                saveClassResponse(classId, currentRecord.status ?? null, value.trim());
+                showToast(`✨ ${classId} 班備註已儲存`, 'success');
+            }, 800);
+        };
+
+        // 更新頂部統計儀表板
+        function updateStats() {
+            let joinCount = 0;
+            let declineCount = 0;
+
+            SCHOOL_STRUCTURE.forEach(group => {
+                group.classes.forEach(classId => {
+                    const status = responsesData[classId]?.status ?? null;
+                    if (status === 'join') joinCount++;
+                    else if (status === 'decline') declineCount++;
+                });
+            });
+
+            const respondedCount = joinCount + declineCount;
+            const pendingCount = TOTAL_CLASSES - respondedCount;
+            const percentage = Math.round((respondedCount / TOTAL_CLASSES) * 100);
+            const joinPct = (joinCount / TOTAL_CLASSES) * 100;
+            const declinePct = (declineCount / TOTAL_CLASSES) * 100;
+
+            document.getElementById('stat-join').textContent = joinCount;
+            document.getElementById('stat-decline').textContent = declineCount;
+            document.getElementById('stat-pending').textContent = pendingCount;
+            document.getElementById('stat-responded-text').textContent = `${respondedCount}/${TOTAL_CLASSES} 班`;
+            document.getElementById('stat-percentage').textContent = `${percentage}%`;
+
+            document.getElementById('progress-join').style.width = `${joinPct}%`;
+            document.getElementById('progress-decline').style.width = `${declinePct}%`;
+        }
+
+        // 渲染年級與班級卡片列表
+        function renderGradesList() {
+            const container = document.getElementById('grades-container');
+            
+            const activeElement = document.activeElement;
+            const activeNoteClassId = activeElement?.dataset?.noteClass || null;
+            const selectionStart = activeElement?.selectionStart || 0;
+
+            let html = '';
+            let totalVisibleClasses = 0;
+
+            SCHOOL_STRUCTURE.forEach(group => {
+                if (currentGradeFilter !== 'all' && group.grade !== currentGradeFilter) {
+                    return;
+                }
+
+                const filteredClasses = group.classes.filter(classId => {
+                    const status = responsesData[classId]?.status ?? null;
+                    if (currentStatusFilter === 'all') return true;
+                    if (currentStatusFilter === 'pending') return status === null;
+                    return status === currentStatusFilter;
+                });
+
+                if (filteredClasses.length === 0) return;
+                totalVisibleClasses += filteredClasses.length;
+
+                const gradeJoinCount = group.classes.filter(c => responsesData[c]?.status === 'join').length;
+                const gradeRespondedCount = group.classes.filter(c => {
+                    const s = responsesData[c]?.status;
+                    return s === 'join' || s === 'decline';
+                }).length;
+
+                html += `
+                <section class="bg-white/95 backdrop-blur-xs rounded-2xl shadow-sm border border-gold-200/80 overflow-hidden">
+                    <!-- 年級區塊標題列 -->
+                    <div class="bg-gradient-to-r from-[#FDFBF7] via-forest-50/40 to-[#FDFBF7] px-5 py-3.5 border-b border-gold-200/70 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <span class="text-lg sm:text-xl select-none" aria-hidden="true">${group.icon}</span>
+                            <h3 class="text-base sm:text-lg font-bold text-forest-900">${group.title}</h3>
+                            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-gold-100/80 text-gold-700 border border-gold-200/80">共 ${group.classes.length} 班</span>
+                        </div>
+                        <div class="text-xs sm:text-sm text-gray-600 font-medium">
+                            已填 <span class="text-gray-900 font-bold">${gradeRespondedCount}</span>/${group.classes.length} 班
+                            <span class="mx-1.5 text-gold-300">|</span>
+                            參加 <span class="text-forest-800 font-bold">${gradeJoinCount}</span> 班
+                        </div>
+                    </div>
+
+                    <!-- 班級列表 -->
+                    <div class="divide-y divide-gold-100/80">
+                        ${filteredClasses.map(classId => renderClassRow(classId)).join('')}
+                    </div>
+                </section>
+                `;
+            });
+
+            if (totalVisibleClasses === 0) {
+                html = `
+                <div class="bg-white rounded-2xl p-10 text-center border border-gold-200/80 shadow-sm">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gold-50 text-gold-600 text-2xl mb-3">
+                        ❄️
+                    </div>
+                    <h4 class="text-base font-bold text-gray-800">沒有符合篩選條件的班級</h4>
+                    <p class="text-xs sm:text-sm text-gray-500 mt-1">請嘗試切換上方的年級或狀態篩選按鈕</p>
+                </div>
+                `;
+            }
+
+            container.innerHTML = html;
+
+            if (activeNoteClassId) {
+                const inputToFocus = container.querySelector(`input[data-note-class="${activeNoteClassId}"]`);
+                if (inputToFocus) {
+                    inputToFocus.focus();
+                    inputToFocus.setSelectionRange(selectionStart, selectionStart);
+                }
+            }
+        }
+
+        // 渲染單一班級互動列
+        function renderClassRow(classId) {
+            const record = responsesData[classId] || { status: null, note: '' };
+            const status = record.status ?? null;
+            const note = record.note || '';
+
+            let rowBgClass = 'bg-white hover:bg-[#FDFBF7]';
+            let badgeHtml = '<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500">未填寫</span>';
+
+            if (status === 'join') {
+                rowBgClass = 'bg-forest-50/75 hover:bg-forest-50';
+                badgeHtml = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-forest-100 text-forest-900 border border-forest-300"><span class="w-1.5 h-1.5 rounded-full bg-forest-800"></span>確認參加</span>';
+            } else if (status === 'decline') {
+                rowBgClass = 'bg-holly-50/55 hover:bg-holly-50/80';
+                badgeHtml = '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-holly-100 text-holly-800 border border-holly-200"><span class="w-1.5 h-1.5 rounded-full bg-holly-700"></span>不參加</span>';
+            }
+
+            // 按鈕樣式：參加（聖誕松樹綠 + 金色光澤邊框）、不參加（聖誕冬青紅）
+            const joinBtnClass = status === 'join'
+                ? 'bg-forest-800 text-white border-gold-400 shadow-sm ring-2 ring-forest-800/20 font-bold'
+                : 'bg-white text-gray-600 border-gray-300 hover:border-forest-800 hover:text-forest-800 hover:bg-forest-50/60 font-medium';
+
+            const declineBtnClass = status === 'decline'
+                ? 'bg-holly-700 text-white border-holly-800 shadow-sm ring-2 ring-holly-700/20 font-bold'
+                : 'bg-white text-gray-600 border-gray-300 hover:border-holly-700 hover:text-holly-700 hover:bg-holly-50/60 font-medium';
+
+            return `
+            <div class="class-row-transition p-4 sm:px-5 sm:py-4 flex flex-col md:flex-row md:items-center justify-between gap-3.5 ${rowBgClass}">
+                <!-- 左側：班級代號與狀態標籤 -->
+                <div class="flex items-center justify-between md:justify-start gap-3 shrink-0 min-w-[145px]">
+                    <div class="flex items-center gap-2">
+                        <span class="text-lg sm:text-xl font-bold tracking-tight text-gray-800">${classId}</span>
+                        <span class="text-xs text-gray-400 font-medium">班</span>
+                    </div>
+                    ${badgeHtml}
+                </div>
+
+                <!-- 中間：備註輸入框 -->
+                <div class="flex-1 max-w-md">
+                    <div class="relative">
+                        <input 
+                            type="text" 
+                            data-note-class="${classId}"
+                            value="${escapeHtml(note)}"
+                            oninput="handleNoteInput('${classId}', this.value)"
+                            placeholder="備註 (選填，如：人數、特殊需求...)" 
+                            class="w-full text-xs sm:text-sm px-3 py-2 rounded-xl border border-gray-200 bg-white/95 text-gray-700 placeholder-gray-400 focus:outline-none focus:border-gold-500 focus:ring-2 focus:ring-gold-400/25 transition"
+                        />
+                    </div>
+                </div>
+
+                <!-- 右側：TimeSlot 互動選擇大按鈕 -->
+                <div class="grid grid-cols-2 sm:flex items-center gap-2.5 shrink-0">
+                    <button 
+                        type="button"
+                        onclick="handleStatusToggle('${classId}', 'join')"
+                        class="flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-xl border text-sm transition-all active:scale-95 cursor-pointer select-none ${joinBtnClass}"
+                    >
+                        <svg class="w-4 h-4 ${status === 'join' ? 'text-gold-300' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        <span>參加</span>
+                    </button>
+
+                    <button 
+                        type="button"
+                        onclick="handleStatusToggle('${classId}', 'decline')"
+                        class="flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-xl border text-sm transition-all active:scale-95 cursor-pointer select-none ${declineBtnClass}"
+                    >
+                        <svg class="w-4 h-4 ${status === 'decline' ? 'text-gold-200' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        <span>不參加</span>
+                    </button>
+                </div>
+            </div>
+            `;
+        }
+
+        // 防範 XSS 的 HTML 跳脫函式
+        function escapeHtml(unsafe) {
+            return String(unsafe)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        // 綁定篩選器按鈕事件
+        function setupFilters() {
+            const gradeBtns = document.querySelectorAll('.grade-filter-btn');
+            gradeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    gradeBtns.forEach(b => {
+                        b.classList.remove('bg-forest-800', 'text-white', 'font-semibold', 'shadow-xs');
+                        b.classList.add('bg-[#FDFBF7]', 'border', 'border-gray-200', 'text-gray-700', 'hover:bg-forest-50');
+                    });
+                    btn.classList.remove('bg-[#FDFBF7]', 'border', 'border-gray-200', 'text-gray-700', 'hover:bg-forest-50');
+                    btn.classList.add('bg-forest-800', 'text-white', 'font-semibold', 'shadow-xs');
+
+                    currentGradeFilter = btn.dataset.grade;
+                    renderGradesList();
+                });
+            });
+
+            const statusBtns = document.querySelectorAll('.status-filter-btn');
+            statusBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    statusBtns.forEach(b => {
+                        b.classList.remove('bg-holly-700', 'text-white', 'font-semibold', 'shadow-xs');
+                        b.classList.add('bg-[#FDFBF7]', 'border', 'border-gray-200', 'text-gray-700', 'hover:bg-holly-50');
+                    });
+                    btn.classList.remove('bg-[#FDFBF7]', 'border', 'border-gray-200', 'text-gray-700', 'hover:bg-holly-50');
+                    btn.classList.add('bg-holly-700', 'text-white', 'font-semibold', 'shadow-xs');
+
+                    currentStatusFilter = btn.dataset.status;
+                    renderGradesList();
+                });
+            });
+        }
+
+        // 匯出 CSV 統計表功能
+        function setupExportCSV() {
+            const exportBtn = document.getElementById('export-csv-btn');
+            exportBtn.addEventListener('click', () => {
+                // 加上 UTF-8 BOM (\uFEFF) 確保 Excel 開啟中文不亂碼
+                let csvContent = '\uFEFF年級,班級,參加狀態,備註,最後更新時間\n';
+
+                SCHOOL_STRUCTURE.forEach(group => {
+                    group.classes.forEach(classId => {
+                        const record = responsesData[classId] || { status: null, note: '', updatedAt: '' };
+                        let statusLabel = '未填寫';
+                        if (record.status === 'join') statusLabel = '參加';
+                        else if (record.status === 'decline') statusLabel = '不參加';
+
+                        const safeNote = `"${(record.note || '').replace(/"/g, '""')}"`;
+                        const timeStr = record.updatedAt ? new Date(record.updatedAt).toLocaleString('zh-TW') : '';
+
+                        csvContent += `${group.title},${classId},${statusLabel},${safeNote},"${timeStr}"\n`;
+                    });
+                });
+
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                const dateStr = new Date().toISOString().slice(0, 10);
+                
+                link.setAttribute('href', url);
+                link.setAttribute('download', `聖誕音樂劇_不要怕森林大霧_班級調查統計_${dateStr}.csv`);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+
+                showToast('CSV 統計表已成功匯出下載！', 'success');
+            });
+        }
+
+        // 啟動應用程式
+        window.addEventListener('DOMContentLoaded', () => {
+            setupFilters();
+            setupExportCSV();
+            initFirebase();
+        });
+    </script>
+</body>
+</html>
